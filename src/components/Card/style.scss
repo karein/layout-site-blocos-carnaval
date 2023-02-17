@@ -1,0 +1,18 @@
+.card {
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    height: 153px;
+    width: 100%;
+  }
+
+  #car-content {
+    display: grid;
+    gap: 16px;
+
+    margin: 0 16px;
+
+    text-align: start;
+  }
+}
