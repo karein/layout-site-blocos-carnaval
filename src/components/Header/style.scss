@@ -5,13 +5,15 @@ header {
 
   padding: 100px 223px;
 
-  // background: #F8F8FF;
-  background: rgba($color: #F8F8FF, $alpha: 0.8);
+  // background-color: #F8F8FF;
+  background: rgba($color: #F8F8FF, $alpha: 0.7);
   // opacity: .8;
 
+  min-height: 53.2rem;
 
   display: flex;
   flex-direction: column;
+  position: relative;
 
   text-align: center;
 
@@ -48,11 +50,27 @@ header {
 
     // position: relative;
 
+    .sr-only {
+      /* faz um elemento "sumir da tela mas mantêm a acessibilidade" */
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
     .input-container {
       display: flex;
       flex-direction: row;
+      gap: 12px;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
+
+      background-color: #F8F8FF;
     }
 
     i {
@@ -72,7 +90,7 @@ header {
       padding: 12px 8px;
       border: none;
       border-radius: 5px;
-      background: transparent;
+      // background: transparent;
     }
 
     button {
@@ -82,12 +100,31 @@ header {
       outline: none;
       border-radius: 5px;
       cursor: pointer;
-
-      font-size: 14px;
-      font-weight: bold;
-      color: #fff;
-
-      background: var(--purple-700);
     }
   }
+}
+
+header::before {
+  content: '';
+  background-image: url(../../assets/ilustra-01.svg);
+  width: 40.7rem;
+  height: 34.5rem;
+
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  /* tudo que  "trasbordar"/passar da altura da "caixa" será "escondido" */
+}
+
+header::after {
+  content: "";
+  background-image: url(../../assets/ilustra-02.svg);
+  width: 41.4rem;
+  height: 33rem;
+
+  position: absolute;
+  right: 0;
+  bottom: -1.2rem;
 }

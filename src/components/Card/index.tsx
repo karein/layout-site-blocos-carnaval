@@ -13,7 +13,7 @@ export const Card = ({ title, location, ...rest }: CardProps) => {
       <img src={rest.src} alt={rest.alt} {...rest} />
       {/* </div> */}
 
-      <div id='car-content'>
+      <div id='card-content'>
         <strong>{title}</strong>
 
         <span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</span>

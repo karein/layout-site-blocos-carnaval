@@ -11,11 +11,13 @@ export const Header = () => {
 
       <form>
         <div className='input-container'>
+          <label htmlFor="fname" className='sr-only'>Perquise por nome</label>
           <i className="fa fa-search" />
           <input type="text" id="fname" name="fname" placeholder="Pesquise por nome" />
         </div>
 
-        <div className='select-container'>
+        <div className='input-container'>
+          <label htmlFor="fname" className='sr-only'>Selecione uma cidade</label>
           <i className="fa fa-map-marker"></i>
           <select name="plan" id="plan">
             <option defaultValue="select a city" hidden>

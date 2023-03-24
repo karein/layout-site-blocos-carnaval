@@ -1,13 +1,20 @@
 .card {
+  padding: 0;
   margin: 0 auto;
   text-align: center;
 
+  border: 1px solid var(--gray-100);
+  border-radius: 10px;
+
+  max-width: 38.4rem;
+  overflow: hidden;
+
   img {
-    height: 153px;
+    // height: 153px;
     width: 100%;
   }
 
-  #car-content {
+  #card-content {
     display: grid;
     gap: 16px;
 
